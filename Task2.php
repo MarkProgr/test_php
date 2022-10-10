@@ -1,6 +1,6 @@
 <?php
 
-namespace Solutions;
+namespace src;
 
 use DateTime;
 
@@ -11,7 +11,16 @@ class Task2
         $currentTime = new DateTime();
         $currentYear = $currentTime->format('Y');
 
-        $birthday = new DateTime("$date");
+        try {
+            $birthday = new DateTime("$date");
+        } catch (\Throwable) {
+            return 'Invalid data';
+        }
+
+        if ($currentTime < $birthday) {
+            return 'Invalid data';
+        }
+        
         $birthday = $birthday->format('d-m');
         $birthdayCurrentYear = new DateTime("$birthday-$currentYear");
 
