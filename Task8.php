@@ -1,6 +1,6 @@
 <?php
 
-namespace Solutions;
+namespace src;
 
 class Task8
 {
@@ -8,8 +8,12 @@ class Task8
     {
         $arr = json_decode($json, true);
 
-        return array_walk_recursive($arr, function ($value, $key) {
-            echo "$key : $value" . "\r\n";
-        });
+        try {
+            return array_walk_recursive($arr, function ($value, $key) {
+                echo "$key : $value" . "\r\n";
+            });
+        } catch (\Throwable) {
+            return 'Invalid data';
+        }
     }
 }
