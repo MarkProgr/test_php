@@ -1,15 +1,16 @@
 <?php
 
-namespace Solutions;
+namespace src;
 
 class Task10
 {
     public function main(int $inputNumber): array|string
     {
-        $arr[] = $inputNumber;
         if ($inputNumber <= 0) {
-            return $arr[] = 'Error!';
+            return 'Invalid data!';
         }
+
+        $arr[] = $inputNumber;
         while ($inputNumber != 1) {
             if ($inputNumber % 2 === 0) {
                 $arr[] = $inputNumber / 2;
