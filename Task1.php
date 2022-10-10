@@ -1,6 +1,6 @@
 <?php
 
-namespace Solutions;
+namespace src;
 
 class Task1
 {
