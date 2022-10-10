@@ -1,6 +1,6 @@
 <?php
 
-namespace Solutions;
+namespace src;
 
 class Task12
 {
@@ -33,7 +33,7 @@ class Task12
             $this->result = $this->numberOne / $this->numberTwo;
             return $this;
         } catch (\DivisionByZeroError) {
-            $this->result = 'Деление на ноль запрещено';
+            $this->result = 'You can not divide by zero';
             return $this;
         }
     }
