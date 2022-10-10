@@ -1,10 +1,10 @@
 <?php
 
-namespace Solutions;
+namespace src;
 
 class Task9
 {
-    public function main(array $array, int $number)
+    public function main(array $array, int $number): array
     {
         $count = count($array) - 2;
         $newArr = [];
